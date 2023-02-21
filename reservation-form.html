@@ -4,74 +4,139 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Travel Reservation Form</title>
+    <style>
+      #header {
+        font-size: 3rem;
+      }
+    </style>
   </head>
+
   <body align="center">
-    <h1>Travel Reservation Form</h1>
+    <h1 id="header">Travel Reservation Form</h1>
+    <h3>* denotes mandatory</h3>
 
-    <h3>*denotes manfotory</h3>
-
-    <form action="submitpage.html" target="_blank">
-      <!-- Full Name -->
-      <label for="fname">Full Name:</label>
-      <input type="text" id="fname" name="flname" required />
+    <form action="submitpage.html" method="form">
+      <!--Full name -->
+      <label for="fullname">Full name*:</label>
+      <br />
+      <input
+        type="text"
+        name="fullname"
+        id="fullname"
+        placeholder="FirstName LastName"
+        pattern="[a-zA-Z]+"
+        required
+      />
       <br /><br />
-      <!-- Email -->
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <!--Email Address -->
+      <label for="email">Email address*:</label>
+      <br />
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="EMAIL_ADDRESS"
+        required
+      />
       <br /><br />
-      <!-- Select Tour Package -->
-      <label for="Select-Tour-Package">Select Tour Package:</label>
-      <select id="Select-Tour-Package" name="Select-Tour-Package">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+      <!--Tour Package -->
+      <label for="tourpackage">Select Tour Package*:</label>
+      <br />
+      <select name="tourpackage" id="tourpackage">
+        <option value="tour1">Tour 1</option>
+        <option value="tour2">Tour 2</option>
+        <option value="tour3">Tour 3</option>
+        <option value="tour4">Tour 4</option>
       </select>
       <br /><br />
-      <!-- Arrival Date -->
-      <label for="Arrival-Date">Arrival Date:</label>
-      <input type="date" id="Arrival-Date" name="Arrival-Date" />
+      <!--Date -->
+      <label for="arrival_date">Arrival Date*:</label>
+      <br />
+      <input
+        type="date"
+        name="arrival_date"
+        id="arrival_date"
+        placeholder="m/d/y"
+        required
+      />
       <br /><br />
-      <!-- Number of Persons -->
-      <label for="Number-of-Persons">Number of Persons:</label>
+      <!--Number of Persons -->
+      <label for="number_of_persons">Number of Persons*:</label>
+      <br />
       <input
-        type="text"
-        id="Number-of-Persons"
-        name="Number-of-Persons"
+        type="number"
+        name="number_of_persons"
+        id="number_of_persons"
+        value="1"
         required
       />
       <br />
-      <!-- Check Box -->
-      <p>What would you want to avail?</p>
-      <div required>
-        <label for="Boarding">Boarding</label>
-        <input type="checkbox" id="Boarding" name="Boarding" check />
-        <br />
-        <label for="Fooding">Fooding</label>
-        <input type="checkbox" id="Fooding" name="Fooding" />
-        <br />
-        <label for="Sight-Seeing">Sight Seeing</label>
-        <input type="checkbox" id="Sight-Seeing" name="Sight-Seeing" />
-      </div>
       <br />
-      <!-- Discout Coupon Code -->
-      <label for="Discout-Coupon-Code">Discout Coupon Code:</label>
-      <input
-        type="text"
-        id="Discout-Coupon-Code"
-        name="Discout Coupon Code"
-        required
-      />
-      <br />
+      <!--What would you want to avail? -->
       <div>
-        <p>Terms and Condition</p>
-        <input type="radio" id="1" name="Condition" value="agree" />
-          <label for="agree">I Agree</label><br />
-          <input type="radio" id="2" name="Condition" value="disagree" />  
-        <label for="disagree">I Disagree</label><br />
+        <label for="avail">What would you want to avail?*</label>
+        <br />
+        <label for="avail_boarding">Boarding</label>
+        <input
+          type="checkbox"
+          id="avail_boarding"
+          name="avail_b"
+          value="boarding"
+        />
+        <br />
+        <label for="avail_fooding">Fooding</label>
+        <input
+          type="checkbox"
+          id="avail_fooding"
+          name="avail_f"
+          value="fooding"
+        />
+        <br />
+        <label for="avail_sightseeing">Sight Seeing</label>
+        <input
+          type="checkbox"
+          id="avail_sightseeing"
+          name="avail_ss"
+          value="sightseeing"
+        />
       </div>
       <br />
-      <input type="submit" value="Complete Reservation" />
+      <!-- Discount Coupon Code -->
+      <label for="discount_coupon">Discount Coupon Code:</label>
+      <br />
+      <input
+        type="text"
+        id="discount_coupon"
+        name="discount_coupon"
+        placeholder="COUPON CODE"
+        maxlength="6"
+      />
+      <br />
+      <br />
+      <!-- Terms and Conditions -->
+      <div>
+        <label for="terms_and_condition">Terms and Conditions*</label>
+        <br />
+        <label for="agree">I agree</label>
+        <input
+          type="radio"
+          id="agree"
+          name="terms_and_condition"
+          value="agree"
+        />
+        <label for="disagree">I disagree</label>
+        <input
+          type="radio"
+          id="disagree"
+          name="terms_and_condition"
+          value="disagree"
+        />
+      </div>
+      <br />
+      <!-- Submit -->
+
+      <button type="submit">Complete Reservation</button>
     </form>
   </body>
 </html>
