@@ -8,6 +8,79 @@
     <style>
       #header {
         font-size: 3rem;
+        color: #1a1a1a;
+        text-shadow: 2px 2px 5px #d3d3d3;
+      }
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #d3d3d3;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input,
+      select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background: linear-gradient(to right, #f5af19, #fb3640);
+      }
+
+      #header,
+      h3,
+      button {
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        color: #666;
+        font-weight: normal;
+      }
+
+      label[for="avail"] {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
       }
     </style>
   </head>
@@ -24,7 +97,7 @@
         type="text"
         name="fullname"
         id="fullname"
-        placeholder="Fristname Lastname"
+        placeholder="Fristname and Lastname"
         pattern="[a-zA-Z]+"
         required
       />
@@ -76,7 +149,7 @@
       <!--What would you want to avail? -->
       <div>
         <label for="avail">What would you want to avail?*</label>
-        <br />
+
         <label for="avail_boarding">Boarding</label>
         <input
           type="checkbox"
@@ -84,7 +157,7 @@
           name="avail_b"
           value="boarding"
         />
-        <br />
+
         <label for="avail_fooding">Fooding</label>
         <input
           type="checkbox"
@@ -92,7 +165,7 @@
           name="avail_f"
           value="fooding"
         />
-        <br />
+
         <label for="avail_sightseeing">Sight Seeing</label>
         <input
           type="checkbox"
